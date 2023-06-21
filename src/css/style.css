@@ -41,7 +41,7 @@ main .count-info {
   gap: 1.5rem;
 }
 
-main .count-info span#count {
+main .count-info span#count-number {
   font-size: 12rem;
 }
 
