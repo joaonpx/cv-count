@@ -30,6 +30,10 @@ body {
 }
 
 /* ----------- main ---------- */
+main {
+  text-align: center;
+}
+
 main span {
   font-weight: 600;
 }
@@ -37,6 +41,8 @@ main span {
 main .count-info {
   display: flex;
   align-items: flex-end;
+  justify-content: center;
+  flex-wrap: wrap;
 
   gap: 1.5rem;
 }
@@ -52,7 +58,7 @@ main .count-info span:last-child {
 }
 
 main #btn-count {
-  width: 100%;
+  width: min(100%, 50vw);
   height: 6rem;
 
   background: var(--background);
