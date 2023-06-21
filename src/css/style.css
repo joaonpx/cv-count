@@ -10,9 +10,9 @@
 
   --text: #ffffff;
   --background: #171717;
-  --primary-button: #ea8575;
+  --primary-button: #89fbaf;
   --secondary-button: #ffffff;
-  --accent: #d93920;
+  --accent: #70fa9e;
 
   font-size: 62.5%; /* 1rem = 10px */
 }
@@ -68,7 +68,7 @@ main #btn-count {
 
 main #btn-count:hover {
   background: var(--primary-button);
-  color: var(--text);
+  color: var(--background);
 }
 
 .color-effect {
