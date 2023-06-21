@@ -1,0 +1,78 @@
+/* ----------- general ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "Inter", sans-serif;
+
+  --text: #ffffff;
+  --background: #171717;
+  --primary-button: #ea8575;
+  --secondary-button: #ffffff;
+  --accent: #d93920;
+
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--background);
+  color: var(--text);
+}
+
+/* ----------- main ---------- */
+main span {
+  font-weight: 600;
+}
+
+main .count-info {
+  display: flex;
+  align-items: flex-end;
+
+  gap: 1.5rem;
+}
+
+main .count-info span#count {
+  font-size: 12rem;
+}
+
+main .count-info span:last-child {
+  font-size: 2.8rem;
+
+  margin-bottom: 2.5rem;
+}
+
+main #btn-count {
+  width: 100%;
+  height: 6rem;
+
+  background: var(--background);
+  color: var(--primary-button);
+  border: 1px var(--primary-button) solid;
+  border-radius: 0.5rem;
+
+  font-size: 1.5rem;
+
+  cursor: pointer;
+  transition: all 200ms;
+}
+
+main #btn-count:hover {
+  background: var(--primary-button);
+  color: var(--text);
+}
+
+.color-effect {
+  background: linear-gradient(120deg, var(--primary-button), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
