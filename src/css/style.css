@@ -11,6 +11,7 @@
   --text: #ffffff;
   --background: #171717;
   --primary-button: hsl(140, 93%, 76%);
+  --primary-button-shadow: hsla(140, 93%, 76%, 0.2);
   --secondary-button: #ffffff;
   --cancel-button: hsl(0, 93%, 71%);
   --accent: hsl(140, 93%, 71%);
@@ -78,6 +79,8 @@ body {
   flex-wrap: wrap;
 
   gap: 1.5rem;
+
+  cursor: default;
 }
 
 .main-container .count-info span#count-number {
@@ -108,6 +111,7 @@ body {
 .main-container .btn-count:hover {
   background: var(--primary-button);
   color: var(--background);
+  box-shadow: 0 0 2rem var(--primary-button-shadow);
 }
 
 .color-effect {
