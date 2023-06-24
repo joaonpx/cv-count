@@ -10,9 +10,10 @@
 
   --text: #ffffff;
   --background: #171717;
-  --primary-button: #89fbaf;
+  --primary-button: hsl(140, 93%, 76%);
   --secondary-button: #ffffff;
-  --accent: #70fa9e;
+  --cancel-button: hsl(0, 93%, 71%);
+  --accent: hsl(140, 93%, 71%);
 
   font-size: 62.5%; /* 1rem = 10px */
 }
@@ -24,21 +25,53 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 
   background-color: var(--background);
   color: var(--text);
 }
 
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+  font-size: 1.5rem;
+  text-decoration: none;
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  opacity: 0.6;
+  transition: all 200ms;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+/* ----------- header ---------- */
+.header-container {
+  position: absolute;
+  top: 2rem;
+}
+
+.header-container .btn {
+  margin-bottom: 1rem;
+}
+
 /* ----------- main ---------- */
-main {
+.main-container {
   text-align: center;
 }
 
-main span {
+.main-container span {
   font-weight: 600;
 }
 
-main .count-info {
+.main-container .count-info {
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -47,17 +80,17 @@ main .count-info {
   gap: 1.5rem;
 }
 
-main .count-info span#count-number {
+.main-container .count-info span#count-number {
   font-size: 12rem;
 }
 
-main .count-info span:last-child {
+.main-container .count-info span:last-child {
   font-size: 2.8rem;
 
   margin-bottom: 2.5rem;
 }
 
-main #btn-count {
+.main-container .btn-count {
   width: min(100%, 50vw);
   height: 6rem;
 
@@ -72,7 +105,7 @@ main #btn-count {
   transition: all 200ms;
 }
 
-main #btn-count:hover {
+.main-container .btn-count:hover {
   background: var(--primary-button);
   color: var(--background);
 }
@@ -81,4 +114,49 @@ main #btn-count:hover {
   background: linear-gradient(120deg, var(--primary-button), var(--accent));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/* ----------- confirm ---------- */
+.confirm-container {
+  display: none;
+}
+
+.confirm-container.active {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+
+  animation: slide 150ms;
+}
+
+.confirm-container p {
+  font-size: 1.5rem;
+}
+
+.confirm-btns {
+  display: flex;
+  gap: 2rem;
+}
+
+.btn.confirm:hover {
+  color: var(--primary-button);
+  text-shadow: 0 0 1rem var(--primary-button);
+}
+
+.btn.cancel:hover {
+  color: var(--cancel-button);
+  text-shadow: 0 0 1rem var(--cancel-button);
+}
+
+/* ----------- animation ---------- */
+@keyframes slide {
+  0% {
+    transform: translateY(-2rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
