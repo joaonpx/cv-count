@@ -13,4 +13,24 @@ function addCount() {
   countNumber.innerText = localStorage.clickCount
 }
 
-export { addCount }
+function resetCount() {
+  let confirmContainer = document.querySelector(".confirm-container")
+  let btnConfirm = document.querySelector(".btn.confirm")
+  let btnCancel = document.querySelector(".btn.cancel")
+
+  confirmContainer.classList.add("active")
+
+  btnConfirm.addEventListener("click", () => {
+    localStorage.clickCount = 0
+
+    countNumber.innerText = localStorage.clickCount
+
+    confirmContainer.classList.remove("active")
+  })
+
+  btnCancel.addEventListener("click", () => {
+    confirmContainer.classList.remove("active")
+  })
+}
+
+export { addCount, resetCount }
