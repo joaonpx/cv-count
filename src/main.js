@@ -8,4 +8,8 @@ btnCount.addEventListener("click", addCount)
 
 btnReset.addEventListener("click", resetCount)
 
-countNumber.innerText = localStorage.clickCount
+if (!localStorage.clickCount) {
+  countNumber.innerText = 0
+} else {
+  countNumber.innerText = localStorage.clickCount
+}
