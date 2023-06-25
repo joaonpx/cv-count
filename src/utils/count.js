@@ -1,6 +1,6 @@
-function addCount() {
-  let countNumber = document.getElementById("count-number")
+let countNumber = document.getElementById("count-number")
 
+function addCount() {
   // verificando se existe algum valor dentro do item clickCount
   if (localStorage.clickCount) {
     // se existir pega o valor atual e soma + 1
