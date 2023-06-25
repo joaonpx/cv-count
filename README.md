@@ -21,4 +21,4 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-Um projeto para contagem de curriculos entregues. Desenvolvido durante o meu curso de ADS na FIAP.
+Um projeto para contagem de currículos entregues. Desenvolvido durante o meu curso de ADS na FIAP.
