@@ -22,3 +22,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 ## 💻 Projeto
 
 Um projeto para contagem de currículos entregues. Desenvolvido durante o meu curso de ADS na FIAP.
+
+## 🎨 Demo
+
+- [CV Count](https://cvcount.vercel.app/)
